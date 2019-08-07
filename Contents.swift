@@ -16,24 +16,15 @@ print(valueA * valueB)
 print(valueA / valueB)
 
 //課題1-3  if文
-var valueC :Int = 4
-if valueC < 10 {
-    print("4は1桁の値です。")
-}
-
-valueC = 12
-if (valueC < 100 && valueC > 9) {
-    print("12は2桁の値です。")
-}
-
-valueC = 100
-if (valueC > 99 && valueC < 1000){
-    print("100は3桁の値です。")
-}
-
-valueC = 1999
-if (valueC >= 1000) {
-    print("1999は4桁以上の値です。")
+var valueC: Int = 4
+if (valueC < 10) {
+    print("\(valueC)は1桁の値です。")
+} else if (valueC < 100) {
+    print("\(valueC)は2桁の値です。")
+} else if (valueC < 1000) {
+    print("\(valueC)は3桁の値です。")
+} else {
+    print("\(valueC)は4桁以上の値です。")
 }
 
 //課題1-4  switch文
@@ -88,7 +79,7 @@ insA.put()
 class HogeB {
     func putName(name: String) {
         
-        print("私の名前は\(name)")
+        print("私の名前は\(name)です。")
     }
 }
 let takashi = HogeB()
@@ -104,7 +95,7 @@ class HogeC {
         self.name = name
     }
     func putName(){
-        print("私の名前\(self.name)です。")
+        print("私の名前は\(self.name)です。")
     }
 }
 let yamada = HogeC(name: "やまだ")
